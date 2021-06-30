@@ -1,0 +1,14 @@
+{
+  "name": "node-certcheck",
+  "version": "0.0.1",
+  "description": "A node.js application to scan ssl/tls certificates and compile their information.",
+  "main": "app.js",
+  "repository": "https://github.com/msudol/node-certcheck.git",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Sudol"
+}
