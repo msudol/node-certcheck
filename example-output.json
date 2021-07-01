@@ -1,20 +1,101 @@
-{
-  subject: [Object: null prototype] { CN: 'hey0.pwn9.com' },
-  issuer: [Object: null prototype] { C: 'US', O: "Let's Encrypt", CN: 'R3' },
-  subjectaltname: 'DNS:discord.pwn9.com, DNS:hey0.pwn9.com, DNS:pwn9.com, DNS:www.pwn9.com',
-  infoAccess: [Object: null prototype] {
-    'OCSP - URI': [ 'http://r3.o.lencr.org' ],
-    'CA Issuers - URI': [ 'http://r3.i.lencr.org/' ]
+[
+  {
+    subject: [Object: null prototype] { CN: 'www.google.com' },
+    issuer: [Object: null prototype] {
+      C: 'US',
+      O: 'Google Trust Services LLC',
+      CN: 'GTS CA 1C3'
+    },
+    subjectaltname: 'DNS:www.google.com',
+    infoAccess: [Object: null prototype] {
+      'OCSP - URI': [Array],
+      'CA Issuers - URI': [Array]
+    },
+    bits: 256,
+    pubkey: <Buffer 04 38 5f 04 c2 d3 b9 00 c8 9e d1 60 75 96 ba c1 09 80 05 ff c1 92 0e 53 4a ac 7f a4 fe b3 54 36 fc 71 65 75 3f 8c d0 c1 63 1b ce 91 21 35 39 d1 b3 34 ... 15 more bytes>,
+    asn1Curve: 'prime256v1',
+    nistCurve: 'P-256',
+    valid_from: 'Jun  7 03:57:33 2021 GMT',
+    valid_to: 'Aug 30 03:57:32 2021 GMT',
+    fingerprint: 'AC:65:8D:AB:17:06:59:3F:6B:EA:1B:EE:F6:38:5A:46:20:68:67:7D',
+    fingerprint256: '9C:37:29:F2:01:FF:52:F0:D7:C1:E1:6E:9E:76:A0:71:C1:FB:E4:63:56:F8:F1:E4:C4:E7:EC:8E:3E:E5:67:1A',
+    ext_key_usage: [ '1.3.6.1.5.5.7.3.1' ],
+    serialNumber: 'A7F8857F68F4AD880A00000000E06117',
+    raw: <Buffer 30 82 04 87 30 82 03 6f a0 03 02 01 02 02 11 00 a7 f8 85 7f 68 f4 ad 88 0a 00 00 00 00 e0 61 17 30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00 30 46 31 ... 1113 more bytes>
   },
-  modulus: 'AE17FC41FC83A70EC64CA22A29D2790A900F89E4E9CA290F7115363563981C9E2473870251978774EF8CC2B55144A480819A885B8919143E1DC2956589A028428AA9B73A55A77ED384C24F87E5755B2EB0B27342DECC01A531B854C167994517E9F62588FF909E20DEF744F517A98FEF578A0FA3BA598EEC983AD284BE1DB14C794507D27EC18C83530464E68061F829F4D2316324AF18298D49462CC35648B232DF9B07A043926839F575A44EBCBAE30279D17D6DCE2DCADF8B458FE73560C55110ED87B8B379A0B85C32CE7CD3EC44622438578BCDE2F5CD76FD4F45D2DDC127810BA9606F683C1D1FA11319D1599C099287A742017F918AD66FC592BF6A81',
-  bits: 2048,
-  exponent: '0x10001',
-  pubkey: <Buffer 30 82 01 22 30 0d 06 09 2a 86 48 86 f7 0d 01 01 01 05 00 03 82 01 0f 00 30 82 01 0a 02 82 01 01 00 ae 17 fc 41 fc 83 a7 0e c6 4c a2 2a 29 d2 79 0a 90 ... 244 more bytes>,
-  valid_from: 'Jun  7 03:14:22 2021 GMT',
-  valid_to: 'Sep  5 03:14:22 2021 GMT',
-  fingerprint: '9A:32:E8:22:B2:02:5B:13:EC:BC:35:E2:BD:AD:F6:E3:EC:91:36:AD',
-  fingerprint256: '33:9A:99:8C:49:A4:58:DA:55:83:97:F0:EC:5A:C3:42:CB:59:00:E6:D1:77:1D:02:1D:80:9E:6C:FB:38:40:6D',
-  ext_key_usage: [ '1.3.6.1.5.5.7.3.1', '1.3.6.1.5.5.7.3.2' ],
-  serialNumber: '035F478E8FE8DFBF3DD9CD1C1DA5506F09FE',
-  raw: <Buffer 30 82 05 4a 30 82 04 32 a0 03 02 01 02 02 12 03 5f 47 8e 8f e8 df bf 3d d9 cd 1c 1d a5 50 6f 09 fe 30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00 30 32 ... 1308 more bytes>
-}
+  {
+    subject: [Object: null prototype] {
+      businessCategory: 'Private Organization',
+      jurisdictionC: 'US',
+      jurisdictionST: 'Delaware',
+      serialNumber: '3972972',
+      C: 'US',
+      ST: 'California',
+      L: 'Santa Ana',
+      O: 'TTM Technologies, Inc.',
+      CN: 'www.ttmtech.com'
+    },
+    issuer: [Object: null prototype] {
+      C: 'US',
+      O: 'DigiCert Inc',
+      OU: 'www.digicert.com',
+      CN: 'DigiCert SHA2 Extended Validation Server CA'
+    },
+    subjectaltname: 'DNS:www.ttmtech.com, DNS:ttmtech.com, DNS:www.anaren.com, DNS:anaren.com, DNS:www.ttm.com, DNS:ttm.com',
+    infoAccess: [Object: null prototype] {
+      'OCSP - URI': [Array],
+      'CA Issuers - URI': [Array]
+    },
+    modulus: 'A568CEDD1BC1CC44EA1F3418270A5DE1CAD45091F1CE199FDB2F8B1EEDBBC185903A9510E76553DA167E63F690EF80D3105B5271EA348BD0A03AC9DADC76741083BB2EAE09AB2FB317662585ECBBEBB91285D43A00037A6F62D0ECB8BBD8BAB3B66579ABD27CF3FF8C71FE7F6A8C1E531F017C14B5E3D3FB70AE96A393DED2A843DEEBC50E0E3435AB7AC8FFFA323063B4912C9C78AA2D96049B338624CAB53DD23CF4D71261486379CDB22B932F3D3927C2CF465F70582A445DC3F6DC444AFEEC92C34BA7E6E0B2E26F35D2BC252BC597514366E695C67871C71BEBD75DE9035B94C8EB5334885060CCDDF1C71BFE2CEB95E1373759CF88023DD1F7BBD6BE63',
+    bits: 2048,
+    exponent: '0x10001',
+    pubkey: <Buffer 30 82 01 22 30 0d 06 09 2a 86 48 86 f7 0d 01 01 01 05 00 03 82 01 0f 00 30 82 01 0a 02 82 01 01 00 a5 68 ce dd 1b c1 cc 44 ea 1f 34 18 27 0a 5d e1 ca ... 244 more bytes>,
+    valid_from: 'Apr 23 00:00:00 2021 GMT',
+    valid_to: 'May 24 23:59:59 2022 GMT',
+    fingerprint: 'E3:83:E8:4E:24:5B:D0:45:0F:54:0F:11:94:FD:77:0B:5E:40:FC:CF',
+    fingerprint256: 'B6:F2:23:80:13:05:F5:46:EF:D5:DA:25:C2:59:20:4F:02:AE:20:41:64:ED:DF:F8:9B:85:84:5F:77:80:6F:2C',
+    ext_key_usage: [ '1.3.6.1.5.5.7.3.1', '1.3.6.1.5.5.7.3.2' ],
+    serialNumber: '0F930D5E4865D9FEDF2A0C958C5E581A',
+    raw: <Buffer 30 82 07 82 30 82 06 6a a0 03 02 01 02 02 10 0f 93 0d 5e 48 65 d9 fe df 2a 0c 95 8c 5e 58 1a 30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00 30 75 31 0b ... 1876 more bytes>
+  },
+  {
+    subject: [Object: null prototype] { CN: 'msudol.com' },
+    issuer: [Object: null prototype] { C: 'US', O: "Let's Encrypt", CN: 'R3' },
+    subjectaltname: 'DNS:msudol.com, DNS:www.msudol.com',
+    infoAccess: [Object: null prototype] {
+      'OCSP - URI': [Array],
+      'CA Issuers - URI': [Array]
+    },
+    modulus: 'BBE5A765541807DA63E7BBC8FC0BD7E53EF1837FF56FD46343B2DFE08ADA80DA65C92990E054EB81984126F1C81F82FAE6C36DC24BEFFB3119F8076827BD298306482A2634A50E947EAE8BB130497B7306AE9848F4ABB0BF100530E0077D456CA6B2BE57DF5013C0EA056E0A92069C933F5E84DF4EEFCD71F13AE1FC9CCF3F3258914A78A1562D8EEF0040E95D5CFD3A5FBD0254F8A9CD85B7CEED33C6CCC7B34471B6978F182FA970BC64D97F4F45578D0AECC7F87B1253B0BC863B44710D1037278C5245B1E9E42502C395CBAD24CB57850EF86B2C387CCB7112FA0A0A0F3C78CFC032D2A67F11930683904E7FC1FD5F9C33144A89195C18089404E568D051',
+    bits: 2048,
+    exponent: '0x10001',
+    pubkey: <Buffer 30 82 01 22 30 0d 06 09 2a 86 48 86 f7 0d 01 01 01 05 00 03 82 01 0f 00 30 82 01 0a 02 82 01 01 00 bb e5 a7 65 54 18 07 da 63 e7 bb c8 fc 0b d7 e5 3e ... 244 more bytes>,
+    valid_from: 'May 20 13:12:07 2021 GMT',
+    valid_to: 'Aug 18 13:12:07 2021 GMT',
+    fingerprint: '08:37:4F:C4:BD:EC:06:57:20:56:B7:61:E3:83:4E:33:8E:3F:63:E1',
+    fingerprint256: '06:5A:F8:60:B5:2C:57:C9:BC:6F:19:C1:48:E5:09:E5:2F:20:4E:07:A2:03:46:28:E7:30:49:9C:CC:35:72:24',
+    ext_key_usage: [ '1.3.6.1.5.5.7.3.1', '1.3.6.1.5.5.7.3.2' ],
+    serialNumber: '03A37A68195918D24B74F27F74CF4A399C60',
+    raw: <Buffer 30 82 05 29 30 82 04 11 a0 03 02 01 02 02 12 03 a3 7a 68 19 59 18 d2 4b 74 f2 7f 74 cf 4a 39 9c 60 30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00 30 32 ... 1275 more bytes>
+  },
+  {
+    subject: [Object: null prototype] { CN: 'hey0.pwn9.com' },
+    issuer: [Object: null prototype] { C: 'US', O: "Let's Encrypt", CN: 'R3' },
+    subjectaltname: 'DNS:discord.pwn9.com, DNS:hey0.pwn9.com, DNS:pwn9.com, DNS:www.pwn9.com',
+    infoAccess: [Object: null prototype] {
+      'OCSP - URI': [Array],
+      'CA Issuers - URI': [Array]
+    },
+    modulus: 'AE17FC41FC83A70EC64CA22A29D2790A900F89E4E9CA290F7115363563981C9E2473870251978774EF8CC2B55144A480819A885B8919143E1DC2956589A028428AA9B73A55A77ED384C24F87E5755B2EB0B27342DECC01A531B854C167994517E9F62588FF909E20DEF744F517A98FEF578A0FA3BA598EEC983AD284BE1DB14C794507D27EC18C83530464E68061F829F4D2316324AF18298D49462CC35648B232DF9B07A043926839F575A44EBCBAE30279D17D6DCE2DCADF8B458FE73560C55110ED87B8B379A0B85C32CE7CD3EC44622438578BCDE2F5CD76FD4F45D2DDC127810BA9606F683C1D1FA11319D1599C099287A742017F918AD66FC592BF6A81',
+    bits: 2048,
+    exponent: '0x10001',
+    pubkey: <Buffer 30 82 01 22 30 0d 06 09 2a 86 48 86 f7 0d 01 01 01 05 00 03 82 01 0f 00 30 82 01 0a 02 82 01 01 00 ae 17 fc 41 fc 83 a7 0e c6 4c a2 2a 29 d2 79 0a 90 ... 244 more bytes>,
+    valid_from: 'Jun  7 03:14:22 2021 GMT',
+    valid_to: 'Sep  5 03:14:22 2021 GMT',
+    fingerprint: '9A:32:E8:22:B2:02:5B:13:EC:BC:35:E2:BD:AD:F6:E3:EC:91:36:AD',
+    fingerprint256: '33:9A:99:8C:49:A4:58:DA:55:83:97:F0:EC:5A:C3:42:CB:59:00:E6:D1:77:1D:02:1D:80:9E:6C:FB:38:40:6D',
+    ext_key_usage: [ '1.3.6.1.5.5.7.3.1', '1.3.6.1.5.5.7.3.2' ],
+    serialNumber: '035F478E8FE8DFBF3DD9CD1C1DA5506F09FE',
+    raw: <Buffer 30 82 05 4a 30 82 04 32 a0 03 02 01 02 02 12 03 5f 47 8e 8f e8 df bf 3d d9 cd 1c 1d a5 50 6f 09 fe 30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00 30 32 ... 1308 more bytes>
+  }
+]

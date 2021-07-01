@@ -17,26 +17,27 @@ function makereq(options, callback) {
     
     var self = this;
     
-    self.store = null;
+    self.store = {};
     
     // ignore bad certs
     options.checkServerIdentity = () => undefined;
     
     var req = https.request(options, function(res) {
         
-        self.store = res.connection.getPeerCertificate();
+        self.store.raw = res.connection.getPeerCertificate();
         
-        // do some storage with the results here.
+        // create object with just the data we want
+        self.store.cert = {};
+        self.store.cert.host = options.host;
+        self.store.cert.subjectCN = self.store.raw.subject.CN;
+        self.store.cert.issuerO = self.store.raw.issuer.O;
+        self.store.cert.issuerCN = self.store.raw.issuer.CN;
+        self.store.cert.SAN = self.store.raw.subjectaltname;
+        self.store.cert.validFrom = self.store.raw.valid_from;
+        self.store.cert.validTo = self.store.raw.valid_to;
         
-        //results.push(res.connection.getPeerCertificate());
-        
-        //res.on('data', function(){    
-        //    if (completed_requests++ == config.hosts.length - 1) {
-        //        console.log(results);
-        //    }      
-        //});
-        
-        callback(self.store); 
+        // return callback function with the storage results
+        callback(self.store.cert); 
     });
 
     req.on('error', (e) => {
