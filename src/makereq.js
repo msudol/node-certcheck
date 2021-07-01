@@ -2,6 +2,7 @@
 
 'use strict';
 
+// Don't need this really 
 //process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 // required modules
@@ -19,8 +20,11 @@ function makereq(options, callback) {
     
     self.store = {};
     
-    // ignore bad certs
+    // ignore self signed and other bad certs
     options.checkServerIdentity = () => undefined;
+    
+    // ignore other cert errors
+    options.rejectUnauthorized = false;
     
     var req = https.request(options, function(res) {
         
@@ -50,9 +54,4 @@ function makereq(options, callback) {
 }
 
 module.exports = makereq;
-
-
-
-
-
 
