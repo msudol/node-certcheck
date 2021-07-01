@@ -1,4 +1,4 @@
-/***  spider.js ***/
+/***  makereq.js ***/
 
 'use strict';
 
@@ -29,6 +29,7 @@ function makereq(options, callback) {
         // create object with just the data we want
         self.store.cert = {};
         self.store.cert.host = options.host;
+        self.store.cert.port = options.port;
         self.store.cert.subjectCN = self.store.raw.subject.CN;
         self.store.cert.issuerO = self.store.raw.issuer.O;
         self.store.cert.issuerCN = self.store.raw.issuer.CN;
