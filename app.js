@@ -10,29 +10,32 @@
 // get config values
 const config = require('./config/config.js');
 
-var https = require('https');
+// get makeReq class
+const makeReq = require('./src/makereq.js');
+
 var results = [];
-var completed_requests = 0;
 
+var counts = 0;
 
-for (let i = 0; i < config.hosts.length; i++) {
-
-    var req = https.request(config.hosts[i], function(res) {
+// loop through hosts and pull the cert data
+for (var i = 0; i < config.hosts.length; i++) {
+    
+    let certreq = new makeReq(config.hosts[i], (res) => {
+         
+        // add cert to results array
+        results.push(res);
         
-        results.push(res.connection.getPeerCertificate());
-        
-        res.on('data', function(){    
-            if (completed_requests++ == config.hosts.length - 1) {
-                console.log(results);
-            }      
-        });
-    });
+        counts++;
 
-    req.on('error', (e) => {
-      console.error(e);
+        // if all the requests have been made
+        if (counts == config.hosts.length) {
+            
+            console.log(results);
+            
+        }
+        
     });
     
-    req.end();    
-}
 
+}
 
