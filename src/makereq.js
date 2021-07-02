@@ -10,6 +10,8 @@
 // https
 const https = require('https');
 
+const dns = require('dns');
+
 // config
 const config = require('../config/config.js');
 
@@ -20,6 +22,19 @@ function makereq(options, callback) {
     
     self.store = {};
     
+    // create object with just the data we want
+    self.store.cert = {};
+
+    // is the host a domain name or IP
+    if (/[a-z]/i.test(options.host)) {
+        dns.lookup(options.host, function(err, result) {
+            self.store.cert.ip = result;
+        })            
+    }    
+    else {
+        self.store.cert.ip = options.host;
+    }    
+
     // ignore self signed and other bad certs
     options.checkServerIdentity = () => undefined;
     
@@ -28,10 +43,9 @@ function makereq(options, callback) {
     
     var req = https.request(options, function(res) {
         
-        self.store.raw = res.connection.getPeerCertificate();
+        self.store.raw = res.socket.getPeerCertificate();
         
-        // create object with just the data we want
-        self.store.cert = {};
+        
         self.store.cert.host = options.host;
         self.store.cert.port = options.port;
         self.store.cert.subjectCN = self.store.raw.subject.CN;
