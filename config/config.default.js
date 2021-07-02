@@ -16,4 +16,7 @@ config.hosts = [
     }
 ];
 
+// name of the output file
+config.outfile = 'output.csv';
+
 module.exports = config;

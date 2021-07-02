@@ -45,8 +45,8 @@ for (var i = 0; i < config.hosts.length; i++) {
                 if (err) return console.error(err);
                 
                 // write the csv data to file
-                fs.writeFile(config.outfile, csv, err => {
-                    if (err) return console.error(err);  
+                fs.writeFile(config.outfile, csv, e => {
+                    if (e) return console.error(e);  
                     //file written successfully
                     console.log('Done...');
                 })
