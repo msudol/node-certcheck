@@ -41,11 +41,10 @@ function makereq(options, callback) {
     // ignore other cert errors
     options.rejectUnauthorized = false;
     
+    //TODO: graceful error out on timeouts and stuff
     var req = https.request(options, function(res) {
-        
+
         self.store.raw = res.socket.getPeerCertificate();
-        
-        
         self.store.cert.host = options.host;
         self.store.cert.port = options.port;
         self.store.cert.subjectCN = self.store.raw.subject.CN;
